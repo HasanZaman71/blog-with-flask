@@ -10,7 +10,8 @@ class Blog_post(db.Model):
     upvotes = db.Column(db.Integer, primary_key = False, nullable=True)
     downvotes = db.Column(db.Integer, primary_key = False, nullable=True)
 
-    def __init__(self, title, body, pub_date):
+    def __init__(self, title, body, author, pub_date):
         self.title = title
         self.body = body
+        self.author = author
         self.pub_date = pub_date
